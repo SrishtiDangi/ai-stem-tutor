@@ -170,7 +170,7 @@ elif section == "📄 PDF Reader":
                     }
 
                     try:
-                        res = requests.post("https://api.groq.com/v1/chat/completions",
+                        res = requests.post("https://api.groq.com/openai/v1/chat/completions",
                                             headers=headers, json=data, timeout=15)
                         res.raise_for_status()
                         pdf_answer = res.json()["choices"][0]["message"]["content"]
@@ -207,7 +207,7 @@ elif section == "📷 Image Doubt":
                     "messages": [{"role": "user", "content": prompt}]
                 }
                 try:
-                    res = requests.post("https://api.groq.com/v1/chat/completions",
+                    res = requests.post("https://api.groq.com/openai/v1/chat/completions",
                                         headers=headers, json=data, timeout=15)
                     res.raise_for_status()
                     answer = res.json()["choices"][0]["message"]["content"]
@@ -239,7 +239,7 @@ elif section == "🏠 Ask Tutor":
                     "messages": [{"role": "user", "content": prompt}]
                 }
                 try:
-                    res = requests.post("https://api.groq.com/v1/chat/completions",
+                    res = requests.post("https://api.groq.com/openai/v1/chat/completions",
                                         headers=headers, json=data, timeout=15)
                     res.raise_for_status()
                     answer = res.json()["choices"][0]["message"]["content"]
@@ -300,7 +300,7 @@ Here is the theory material:
                 }
 
                 try:
-                    res = requests.post("https://api.groq.com/v1/chat/completions",
+                    res = requests.post("https://api.groq.com/openai/v1/chat/completions",
                                         headers=headers, json=data, timeout=30)
                     res.raise_for_status()
                     raw_quiz_text = res.json()["choices"][0]["message"]["content"]
