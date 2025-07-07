@@ -1,0 +1,7 @@
+streamlit
+requests
+PyMuPDF
+SpeechRecognition
+python-dotenv
+pytesseract
+Pillow
