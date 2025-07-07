@@ -300,7 +300,7 @@ Here is the theory material:
                 }
 
                 try:
-                    res = requests.post("https://api.groq.com/openai/v1/chat/completions",
+                    res = requests.post("https://api.groq.com/v1/chat/completions",
                                         headers=headers, json=data, timeout=30)
                     res.raise_for_status()
                     raw_quiz_text = res.json()["choices"][0]["message"]["content"]
